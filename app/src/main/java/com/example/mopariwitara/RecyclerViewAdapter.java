@@ -1,12 +1,14 @@
 package com.example.mopariwitara;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -30,8 +32,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder imageViewHolder, int i) {
-
         imageViewHolder.img.setImageResource(mdata.get(i).getImg());
+
+        imageViewHolder.mainLayout.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, MainDescript.class);
+                mContext.startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -43,9 +53,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public class ImageViewHolder extends RecyclerView.ViewHolder{
 
         ImageView img;
+        ConstraintLayout mainLayout;
+
         public ImageViewHolder(@NonNull View itemView) {
             super(itemView);
             img = itemView.findViewById(R.id.row_img);
+            mainLayout =itemView.findViewById(R.id.mainLayout);
         }
     }
 
