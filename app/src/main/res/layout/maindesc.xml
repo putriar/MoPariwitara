@@ -1,77 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="218dp"
-        android:layout_height="58dp"
-        android:text="Restaurant"
-        android:onClick="call"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kebun Binatang Gembira Loka"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="226dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/gembiraloka_yk" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Kebun Binatang Gembira Loka adalah kebun binatang yang berada di Yogyakarta. Berisi berbagai macam spesies dari belahan dunia,
+seperti orangutan, gajah asia, simpanse, harimau, dan lain sebagainya.
+Kebun Binatang Gembira Loka menjadi daya tarik tersendiri bagi para wisatawan Yogyakarta.
+Satu-satunya kebun binatang di area propinsi Daerah Istimewa Yogyakarta yang berdiri sejak tahun 1953.
+Dengan jargonnya yang Bukan Sekedar Rekreasi membuktikan bahwa Gembira Loka Zoo ini merupakan objek wisata semua kalangan."
+                android:textAppearance="@android:style/TextAppearance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Alamat: Jl. Kebun Raya No.2, Rejowinangun, Kec. Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55171"
+                android:textAppearance="@android:style/TextAppearance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text=" Tiket Masuk Bonbin Gembira Loka 2018 \n Rp 30.000 (Senin - Jumat)\n Rp 35.000 (Sabtu, Minggu, libur nasional, dan libur sekolah) \n Rp 40.000 (Idul Fitri) \n Gratis (anak usia di bawah 3 tahun) \n Diskon 50% (SLB/panti asuhan, min 25 orang) \n Diskon 25% (KB/PAUD/TK/TPA/SM, min 25 orang) \n Diskon 15% (SD/SLTP/SLTA/sederajat, min 25 orang) \n Diskon 10% (umum, min 25 orang) \n Buka setiap hari, pukul 07.30 - 17.30 WIB \n Durasi kunjungan: 3-4 jam"
+                android:textAppearance="@android:style/TextAppearance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/button2"
         android:layout_width="195dp"
         android:layout_height="58dp"
-        android:text="Penginapan"
         android:onClick="panggil"
+        android:text="Penginapan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
+        app:layout_constraintStart_toEndOf="@+id/button" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="356dp"
-        android:layout_height="345dp"
-        android:text="Kebun Binatang Gembira Loka adalah kebun binatang yang berada di Yogyakarta. Berisi berbagai macam spesies dari belahan dunia, seperti orangutan, gajah asia, simpanse, harimau, dan lain sebagainya. Kebun Binatang Gembira Loka menjadi daya tarik tersendiri bagi para wisatawan Yogyakarta. Satu-satunya kebun binatang di area propinsi Daerah Istimewa Yogyakarta yang berdiri sejak tahun 1953. Dengan jargonnya yang Bukan Sekedar Rekreasi membuktikan bahwa Gembira Loka Zoo ini merupakan objek wisata semua kalangan.-dikutip dari pihak Gembira Loka Zoo
-        Alamat: Jl. Kebun Raya No.2, Rejowinangun, Kec. Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55171
-        Tiket Masuk Bonbin Gembira Loka 2018
-            Rp 30.000 (Senin - Jumat)
-            Rp 35.000 (Sabutu, Minggu, libur nasional, dan libur sekolah)
-            Rp 40.000 (Idul Fitri)
-            Gratis (anak usia di bawah 3 tahun)
-            Diskon 50% (SLB/panti asuhan, min 25 orang)
-            Diskon 25% (KB/PAUD/TK/TPA/SM, min 25 orang)
-            Diskon 15% (SD/SLTP/SLTA/sederajat, min 25 orang)
-            Diskon 10% (umum, min 25 orang)
-            Buka setiap hari, pukul 07.30 - 17.30 WIBDurasi kunjungan: 3-4 jam"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="218dp"
+        android:layout_height="58dp"
+        android:onClick="call"
+        android:text="Restaurant"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        android:padding="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textAppearance="@android:style/TextAppearance"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="210dp"
-        android:layout_height="330dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/gembiraloka_yk" />
 </androidx.constraintlayout.widget.ConstraintLayout>
